@@ -1,9 +1,9 @@
 const sqlite3 = require("sqlite3").verbose()
-// const { rejects } = require("assert");
-// const { error } = require("console");
-// const { resolve } = require("path");
+
 const { promisify } = require("util");
 
+
+//conectando base de datos
 class ContactosModel {
     constructor(){
         this.db = new sqlite3.Database("./conf/test.db", (err) =>{
@@ -11,7 +11,7 @@ class ContactosModel {
                 console.log("No se pudo conectar a la base de datos", err.message);
                 return;
             }
-            console.log("Conectado con exito a la base de datos SQlite.");
+            console.log("Me conecte  con exito a la base de datos SQlite.");
         });
 
          this.db.run(

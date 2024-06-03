@@ -44,3 +44,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+app.use(require('./routes/index'));
+app.use(express.json());
